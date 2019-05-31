@@ -11,7 +11,7 @@ https://www.nuget.org/packages/cpprestsdk.v.141
 #include "JsonSerializer.h"
 ```
 
-## Declare a (de)serializable struct
+## Declare a de-serializable struct
 
 ```cpp
 struct Sample
@@ -39,4 +39,24 @@ std::string json = stream.str();
 Sample object2;
 std::stringstream stream2(json);
 JsonSerializer::deserialize(stream2, object2);
+```
+
+## Use streams
+
+### Include
+```cpp
+#include "JsonStream.h"
+```
+### Serialize
+```cpp
+Sample object{ 3.1415926535, { 0,1,1,2,3,5,8,13,21,34 }, "Haste makes waste" };
+JsonStream stream;
+stream << object;
+std::string json = stream.str();
+```
+### Deserialize
+```cpp
+JsonStream stream2(json);
+Sample object2;
+stream2 >> object2;
 ```
