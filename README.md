@@ -23,6 +23,7 @@ struct Sample
 	JSON_SERIALIZER(pi, fibonacci, proverb)
 };
 ```
+Supports up to 50 fields by object (this limitation can be increased manually in the macros)  
 You should use the types declared in cstdint  
 https://en.cppreference.com/w/cpp/header/cstdint
 
