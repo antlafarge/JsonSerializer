@@ -23,6 +23,8 @@ struct Sample
 	JSON_SERIALIZER(pi, fibonacci, proverb)
 };
 ```
+You should use the types declared in cstdint  
+https://en.cppreference.com/w/cpp/header/cstdint
 
 ## Serialize
 
