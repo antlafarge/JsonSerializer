@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="JsonSerializer.h" />
+    <ClInclude Include="JsonStream.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />
